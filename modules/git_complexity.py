@@ -1,8 +1,7 @@
 import subprocess
 import datetime
-import os
 
-def get_git_file_info(f: string):
+def get_git_file_info(f: str):
     # Get the commit history for the file
     commits = subprocess.check_output(['git', 'log', '--pretty=format:%ai', f]).decode('utf-8').split('\n')
 
